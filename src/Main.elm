@@ -28,10 +28,10 @@ init =
     ( { messages =
             [ Message "unko" (User 1 "takesi")
             , Message "unko" (User 1 "takesi")
-            , Message "unko" (User 2 "shit")
+            , Message "unko" (User 2 "jim")
             ]
       , content = ""
-      , me = User 2 "shit"
+      , me = User 2 "jim"
       }
     , Cmd.none
     )
@@ -110,7 +110,7 @@ inputChat : Html Msg
 inputChat =
     form [ class "form-group" ]
         [ input [ class "form-control", type_ "textarea", placeholder "Comment", onInput UpdateContent ] []
-        , button [ class "btn btn-primary", onClick SendChat ] [ text "SEND" ]
+        , button [ type_ "button", class "btn btn-primary", onClick SendChat ] [ text "SEND" ]
         ]
 
 
